@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Helpful Inc</title>
   <style>
+    /**********
+    * Base Style
+    **********/
     body { 
       font-family: Arial, sans-serif;
       padding: 1rem;
@@ -21,6 +24,14 @@
       border: 1px solid #333;
       border-radius: .5rem;
     }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    /**********
+    * Font
+    **********/    
     h2::after {
       content: '';
       display: inline-block;
@@ -31,7 +42,35 @@
     p {
       margin: .5em 0;
       line-height: 1.5;
-      letter-spacing: 3%;
+    }
+    @media screen and (max-width: 768px) {
+      p {
+        font-size: 0.875rem;
+      }      
+    }
+
+    /********** 
+    * Company 
+    **********/
+    section.company ul li {
+      display: grid;
+      grid-template-columns: 6em auto;
+    }
+    section.company ul li p {
+      margin-top: .25em;
+      margin-bottom: .25em;
+    }
+
+    /**********
+    * Career
+    **********/
+    section.career ul li {
+      display: grid;
+      grid-template-columns: 6em auto;
+    }
+    section.career ul li p {
+      margin-top: .25em;
+      margin-bottom: .25em;
     }
   </style>
 </head>
@@ -68,27 +107,60 @@
       <div class="inner">
         <h2>About</h2>
         <h3>会社概要</h3>
-        <div>
-          <p>会社名 : 株式会社Helpful</p>
-          <p>設立日 : 2024年11月11日</p>
-          <p>事業内容 : ECサイトの構築・運用・アプリ開発</p>
-          <p>従業員 : エンジニア2名・デザイナー1名 ※業務委託含む</p>
-          <p>代表取締役 : 和田祐耶</p>
-          <p>本社所在地 : 東京都目黒区青葉台4丁目4番12号 THE N3 306</p>
-        </div>
+        <ul>
+          <li>
+            <p>会社名</p>
+            <p>株式会社Helpful</p>
+          </li>
+          <li>
+            <p>設立日</p>
+            <p>2024年11月11日</p>
+          </li>
+          <li>
+            <p>事業内容</p>
+            <p>ECサイトの構築・運用・アプリ開発</p>
+          </li>
+          <li>
+            <p>従業員</p>
+            <p>エンジニア2名・デザイナー1名 ※業務委託含む</p>
+          </li>
+          <li>
+            <p>代表取締役</p>
+            <p>和田祐耶</p>
+          </li>
+          <li>
+            <p>本社所在地</p>
+            <p>東京都目黒区青葉台4丁目4番12号 THE N3 306</p>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="career">
       <div class="inner">
         <h2>Career</h2>
         <h3>経歴</h3>
-        <div>
-          <p>2020年03月 九州大学卒業</p>
-          <p>2020年10月 株式会社UnReact創業（取締役）</p>
-          <p>2022年01月 同上退社</p>
-          <p>2022年03月 株式会社Band業務委託契約</p>
-          <p>2024年11月 株式会社Helpful創業</p>
-        </div>
+        <ul>
+          <li>
+            <p>2020年03月</p>
+            <p>九州大学卒業</p>
+          </li>
+          <li>
+            <p>2020年10月</p>
+            <p>株式会社UnReact創業（取締役）</p>
+          </li>
+          <li>
+            <p>2022年01月</p>
+            <p>同上退社</p>
+          </li>
+          <li>
+            <p>2022年03月</p>
+            <p>株式会社Band業務委託契約</p>
+          </li>
+          <li>
+            <p>2024年11月</p>
+            <p>株式会社Helpful創業</p>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="message">
