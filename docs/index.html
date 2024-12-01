@@ -11,11 +11,12 @@
     body { 
       font-family: Arial, sans-serif;
       padding: 1rem;
-      background-color: #EFEFEF;
+      background-color: #EEE;
       color: #333;
     }
     section {
       margin: 2rem auto;
+      background-color: #FFF;
     }
     section .inner {
       max-width: 1200px;
@@ -29,6 +30,7 @@
       padding: 0;
     }
 
+    
     /**********
     * Font
     **********/    
@@ -49,6 +51,64 @@
       }      
     }
 
+
+    /********** 
+    * Keyword 
+    **********/
+    section.keyword ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+    section.keyword ul li {
+      padding: 1rem;
+      background-color: #FFFFEE;
+      border: 1px solid #333;
+      border-radius: .5rem;
+    }
+    section.keyword ul li h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    section.keyword ul li p.sub_title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: .5em;
+      margin-bottom: 1.5em;
+    }
+    section.keyword ul li p {
+      font-size: .875rem;
+      margin: 0;
+    }
+    @media(width > 768px) {
+      section.keyword ul {
+        grid-template-columns: repeat(4, 1fr);        
+      }
+    }
+
+
+    /********** 
+    * Work
+    **********/
+    section.work h3 {
+      margin-bottom: .5rem;
+    }
+    section.work p {
+      margin: 0;
+    }
+    section.work .example h4 {
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    section.work .example ul.example-list {
+      margin-top: 0;      
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+
     /********** 
     * Company 
     **********/
@@ -61,38 +121,80 @@
       margin-bottom: .25em;
     }
 
+
     /**********
-    * Career
+    * History
     **********/
-    section.career ul li {
+    section.history ul li {
       display: grid;
       grid-template-columns: 6em auto;
     }
-    section.career ul li p {
+    section.history ul li p {
       margin-top: .25em;
       margin-bottom: .25em;
     }
+
+
+    /**********
+    * Message
+    **********/
+    section.message .message-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+    section.message .message-grid img.ceo_image {
+      border-radius: 50%;
+    }
+    section.message .message-grid h3 {
+      margin: 0;
+    }
+
+
   </style>
 </head>
 <body>
   <main>
+    <!-- FV -->
     <section class="fv">
       <div class="inner">
         <h1>Helpful Inc</h1>
       </div>
     </section>
+
     <section class="keyword">
       <div class="inner">
         <h2>Keyword</h2>
         <h3>会社を表すキーワード</h3>
         <ul>
-          <li>Helpful</li>
-          <li>Give</li>
-          <li>Honesty</li>
-          <li>Comfy</li>
+          <li>
+            <h4>Helpful</h4>
+            <p class="sub_title">人の役にたつ</p>
+            <p>
+              働くことで喜ぶ人がいることに誇りを持つ。<br>
+              誰のためになっているのかを判断基準に持つ。
+            </p>
+          </li>
+          <li>
+            <h4>Give</h4>
+            <p class="sub_title">先に与える</p>
+            <p>先に優しさを与えることで、巡り巡って自分に返ってくる。</p>
+          </li>
+          <li>
+            <h4>Honesty</h4>
+            <p class="sub_title">誠実</p>
+            <p>自分にも他人にも誠実な対応をすることで、後悔のない人生を送る。</p>
+          </li>
+          <li>
+            <h4>Comfy</h4>
+            <p class="sub_title">心地良い関係</p>
+            <p>自ら機嫌良く過ごすことで周りの人の気分もたかめ、何でも相談できる心地良い関係を築く。</p>
+          </li>
         </ul>
       </div>
     </section>
+
+    <!-- Work -->
     <section class="work">
       <div class="inner">
         <h2>Work</h2>
@@ -101,8 +203,19 @@
           Shopifyでお困りのことがあれば何でもご相談ください。<br>
           御社ブランドの悩みを話し合いながら解決します。
         </p>
+        <div class="example">
+          <h4>機能開発実績の一部</h4>
+          <ul class="example-list">
+            <li>複数商品から2つ選ぶセット割引キャンペーン。</li>
+            <li>既存サイト用にカスタマイズしたお気に入り機能。</li>
+            <li>診断機能＋商品紹介。</li>
+            <li>Shopify Plus専用のチェックアウトアプリ開発。</li>
+          </ul>
+        </div>
       </div>
     </section>
+
+    <!-- Comapny -->
     <section class="company">
       <div class="inner">
         <h2>About</h2>
@@ -135,10 +248,12 @@
         </ul>
       </div>
     </section>
-    <section class="career">
+
+    <!-- History -->
+    <section class="history">
       <div class="inner">
-        <h2>Career</h2>
-        <h3>経歴</h3>
+        <h2>History</h2>
+        <h3>沿革</h3>
         <ul>
           <li>
             <p>2020年03月</p>
@@ -163,16 +278,32 @@
         </ul>
       </div>
     </section>
+
+    <!-- Message -->
     <section class="message">
       <div class="inner">
         <h2>Message</h2>
-        <h3>代表メッセージ</h3>
-        <p>
-          全ての始まりは、スキルも経験も何もないまま友人と起業した4年前。<br>
-          Shopifyの未来を信じてひたすら技術を磨き、困っている方々の要望に応えて来ました。<br>
-          私たちの強みは、「安心して相談し合える関係」を築くことです。<br>
-          互いに誠実で信頼できる関係を目指し、一緒にブランドを盛り上げるパートナーとして並走していきたいです。
-        </p>
+        <div class="message-grid">
+          <div>
+            <img
+              class="ceo_image"
+              src="https://github.com/user-attachments/assets/3a58ce20-56cc-4ba1-84d6-bea76ca277ae"
+              alt="Yuya Wada"
+              width="256"
+              height="256"
+              loading="lazy"
+            >
+          </div>
+          <div>
+            <h3>代表メッセージ</h3>
+            <p>
+              全ての始まりは、スキルも経験も何もないまま友人と起業した4年前。<br>
+              Shopifyの未来を信じてひたすら技術を磨き、困っている方々の要望に応えて来ました。<br>
+              私たちの強みは、「安心して相談し合える関係」を築くことです。<br>
+              互いに誠実で信頼できる関係を目指し、一緒にブランドを盛り上げるパートナーとして並走していきたいです。
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
