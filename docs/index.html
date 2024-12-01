@@ -140,7 +140,7 @@
     **********/
     section.message .message-grid {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
     section.message .message-grid img.ceo_image {
@@ -149,7 +149,11 @@
     section.message .message-grid h3 {
       margin: 0;
     }
-
+    @media(width > 768px) {
+      section.message .message-grid {
+        grid-template-columns: 256px 1fr;
+      }
+    }
 
   </style>
 </head>
