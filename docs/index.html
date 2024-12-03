@@ -57,7 +57,7 @@
     **********/
     section.keyword ul {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
     section.keyword ul li {
@@ -81,9 +81,14 @@
       font-size: .875rem;
       margin: 0;
     }
-    @media(width > 768px) {
+    @media(width > 684px) {
       section.keyword ul {
-        grid-template-columns: repeat(4, 1fr);        
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(width > 1024px) {
+      section.keyword ul {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
