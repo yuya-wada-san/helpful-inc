@@ -1,324 +1,370 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helpful Inc</title>
-  <style>
-    /**********
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helpful Inc</title>
+    <style>
+      /**********
     * Base Style
     **********/
-    body { 
-      font-family: Arial, sans-serif;
-      padding: 1rem;
-      background-color: #EEE;
-      color: #333;
-    }
-    section {
-      margin: 2rem auto;
-    }
-    section .inner {
-      background-color: #FFF;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-      border: 1px solid #333;
-      border-radius: .5rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 1rem;
+        background-color: #eee;
+        color: #333;
+      }
+      section {
+        margin: 2rem auto;
+      }
+      section .inner {
+        background-color: #fff;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        border: 1px solid #333;
+        border-radius: 0.5rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-    
-    /**********
+      /**********
     * Font
-    **********/    
-    h2::after {
-      content: '';
-      display: inline-block;
-      width: 100%;
-      height: 1px;
-      background-color: #333;
-    }
-    p {
-      margin: .5em 0;
-      line-height: 1.5;
-    }
-    @media screen and (max-width: 768px) {
+    **********/
+      h2::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #333;
+      }
       p {
-        font-size: 0.875rem;
-      }      
-    }
+        margin: 0.5em 0;
+        line-height: 1.5;
+      }
+      @media screen and (max-width: 768px) {
+        p {
+          font-size: 0.875rem;
+        }
+      }
 
-
-    /********** 
+      /********** 
     * Keyword 
     **********/
-    section.keyword ul {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    section.keyword ul li {
-      padding: 1rem;
-      background-color: #FFFFEE;
-      border: 1px solid #333;
-      border-radius: .5rem;
-    }
-    section.keyword ul li h4 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0;
-    }
-    section.keyword ul li p.sub_title {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-top: .5em;
-      margin-bottom: 1.5em;
-    }
-    section.keyword ul li p {
-      font-size: .875rem;
-      margin: 0;
-    }
-    @media(width > 684px) {
       section.keyword ul {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
-    }
-    @media(width > 1024px) {
-      section.keyword ul {
-        grid-template-columns: repeat(4, 1fr);
+      section.keyword ul li {
+        padding: 1rem;
+        background-color: #ffffee;
+        border: 1px solid #333;
+        border-radius: 0.5rem;
       }
-    }
+      section.keyword ul li .title_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      section.keyword ul li h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      section.keyword ul li p.sub_title {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
+      }
+      section.keyword ul li p {
+        font-size: 0.875rem;
+        margin: 0;
+      }
+      @media (width > 684px) {
+        section.keyword ul {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (width > 1024px) {
+        section.keyword ul {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
 
-
-    /********** 
+      /********** 
     * Work
     **********/
-    section.work h3 {
-      margin-bottom: .5rem;
-    }
-    section.work p {
-      margin: 0;
-    }
-    section.work .example h4 {
-      font-weight: 600;
-      margin-top: 1.5rem;
-      margin-bottom: .5rem;
-    }
-    section.work .example ul.example-list {
-      margin-top: 0;      
-      list-style-type: disc;
-      padding-left: 2rem;
-    }
+      section.work h3 {
+        margin-bottom: 0.5rem;
+      }
+      section.work p {
+        margin: 0;
+      }
+      section.work .example h4 {
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      section.work .example ul.example-list {
+        margin-top: 0;
+        list-style-type: disc;
+        padding-left: 2rem;
+      }
 
-
-    /********** 
+      /********** 
     * Company 
     **********/
-    section.company ul li {
-      display: grid;
-      grid-template-columns: 6em auto;
-    }
-    section.company ul li p {
-      margin-top: .25em;
-      margin-bottom: .25em;
-    }
+      section.company ul li {
+        display: grid;
+        grid-template-columns: 6em auto;
+      }
+      section.company ul li p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
 
-
-    /**********
+      /**********
     * History
     **********/
-    section.history ul li {
-      display: grid;
-      grid-template-columns: 6em auto;
-    }
-    section.history ul li p {
-      margin-top: .25em;
-      margin-bottom: .25em;
-    }
+      section.history ul li {
+        display: grid;
+        grid-template-columns: 6em auto;
+      }
+      section.history ul li p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
 
-
-    /**********
+      /**********
     * Message
     **********/
-    section.message .message-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    section.message .message-grid img.ceo_image {
-      border-radius: 50%;
-    }
-    section.message .message-grid h3 {
-      margin: 0;
-    }
-    @media(width > 768px) {
       section.message .message-grid {
-        grid-template-columns: 256px 1fr;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
-    }
+      section.message .message-grid img.ceo_image {
+        border-radius: 50%;
+      }
+      section.message .message-grid h3 {
+        margin: 0;
+      }
+      @media (width > 768px) {
+        section.message .message-grid {
+          grid-template-columns: 256px 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- FV -->
+      <section class="fv">
+        <div class="inner">
+          <h1>Helpful Inc</h1>
+        </div>
+      </section>
 
-  </style>
-</head>
-<body>
-  <main>
-    <!-- FV -->
-    <section class="fv">
-      <div class="inner">
-        <h1>Helpful Inc</h1>
-      </div>
-    </section>
-
-    <section class="keyword">
-      <div class="inner">
-        <h2>Keyword</h2>
-        <h3>会社を表すキーワード</h3>
-        <ul>
-          <li>
-            <h4>Helpful</h4>
-            <p class="sub_title">人の役にたつ</p>
-            <p>
-              働くことで喜ぶ人がいることに誇りを持つ。<br>
-              誰のためになっているのかを判断基準に持つ。
-            </p>
-          </li>
-          <li>
-            <h4>Give</h4>
-            <p class="sub_title">先に与える</p>
-            <p>先に優しさを与えることで、巡り巡って自分に返ってくる。</p>
-          </li>
-          <li>
-            <h4>Honesty</h4>
-            <p class="sub_title">誠実</p>
-            <p>自分にも他人にも誠実な対応をすることで、後悔のない人生を送る。</p>
-          </li>
-          <li>
-            <h4>Comfy</h4>
-            <p class="sub_title">心地良い関係</p>
-            <p>自ら機嫌良く過ごすことで周りの人の気分もたかめ、何でも相談できる心地良い関係を築く。</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Work -->
-    <section class="work">
-      <div class="inner">
-        <h2>Work</h2>
-        <h3>事業内容</h3>
-        <p>
-          Shopifyでお困りのことがあれば何でもご相談ください。<br>
-          御社ブランドの悩みを話し合いながら解決します。
-        </p>
-        <div class="example">
-          <h4>機能開発実績の一部</h4>
-          <ul class="example-list">
-            <li>複数商品から2つ選ぶセット割引キャンペーン。</li>
-            <li>既存サイト用にカスタマイズしたお気に入り機能。</li>
-            <li>診断機能＋商品紹介。</li>
-            <li>Shopify Plus専用のチェックアウトアプリ開発。</li>
+      <section class="keyword">
+        <div class="inner">
+          <h2>Keyword</h2>
+          <h3>会社を表すキーワード</h3>
+          <ul>
+            <li>
+              <div class="title_wrapper">
+                <div>
+                  <h4>Helpful</h4>
+                  <p class="sub_title">人の役にたつ</p>
+                </div>
+                <img
+                  src="https://github.com/user-attachments/assets/156aae3d-b59a-43a9-be5d-cf452089bf91"
+                  alt="Helpful"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                働くことで喜ぶ人がいることに誇りを持つ。<br />
+                誰のためになっているのかを判断基準に持つ。
+              </p>
+            </li>
+            <li>
+              <div class="title_wrapper">
+                <div>
+                  <h4>Give</h4>
+                  <p class="sub_title">先に与える</p>
+                </div>
+                <img
+                  src="https://github.com/user-attachments/assets/22a7df12-77f4-4a6f-a0bb-6312d7361e4e"
+                  alt="Give"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </div>
+              <p>先に優しさを与えることで、巡り巡って自分に返ってくる。</p>
+            </li>
+            <li>
+              <div class="title_wrapper">
+                <div>
+                  <h4>Honesty</h4>
+                  <p class="sub_title">誠実</p>
+                </div>
+                <img
+                  src="https://github.com/user-attachments/assets/9a17a204-3fd5-4584-a7bf-5b3a089466ab"
+                  alt="Honesty"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                自分にも他人にも誠実な対応をすることで、後悔のない人生を送る。
+              </p>
+            </li>
+            <li>
+              <div class="title_wrapper">
+                <div>
+                  <h4>Comfy</h4>
+                  <p class="sub_title">心地良い関係</p>
+                </div>
+                <img
+                  src="https://github.com/user-attachments/assets/e9ee79ad-6151-4ec8-8dc4-4b2154d6cf94"
+                  alt="Comfy"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+                自ら機嫌良く過ごすことで周りの人の気分もたかめ、何でも相談できる心地良い関係を築く。
+              </p>
+            </li>
           </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Comapny -->
-    <section class="company">
-      <div class="inner">
-        <h2>About</h2>
-        <h3>会社概要</h3>
-        <ul>
-          <li>
-            <p>会社名</p>
-            <p>株式会社Helpful</p>
-          </li>
-          <li>
-            <p>設立日</p>
-            <p>2024年11月11日</p>
-          </li>
-          <li>
-            <p>事業内容</p>
-            <p>ECサイトの構築・運用・アプリ開発</p>
-          </li>
-          <li>
-            <p>従業員</p>
-            <p>エンジニア2名・デザイナー1名 ※業務委託含む</p>
-          </li>
-          <li>
-            <p>代表取締役</p>
-            <p>和田祐耶</p>
-          </li>
-          <li>
-            <p>本社所在地</p>
-            <p>東京都目黒区青葉台4丁目4番12号 THE N3 306</p>
-          </li>
-          <li>
-            <p>連絡先</p>
-            <p>helpful3.inc@gmail.com</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- History -->
-    <section class="history">
-      <div class="inner">
-        <h2>History</h2>
-        <h3>沿革</h3>
-        <ul>
-          <li>
-            <p>2020年03月</p>
-            <p>九州大学卒業</p>
-          </li>
-          <li>
-            <p>2020年10月</p>
-            <p>株式会社UnReact創業（取締役）</p>
-          </li>
-          <li>
-            <p>2022年01月</p>
-            <p>同上退社</p>
-          </li>
-          <li>
-            <p>2022年03月</p>
-            <p>株式会社Band業務委託契約</p>
-          </li>
-          <li>
-            <p>2024年11月</p>
-            <p>株式会社Helpful創業</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Message -->
-    <section class="message">
-      <div class="inner">
-        <h2>Message</h2>
-        <div class="message-grid">
-          <div>
-            <img
-              class="ceo_image"
-              src="https://github.com/user-attachments/assets/3a58ce20-56cc-4ba1-84d6-bea76ca277ae"
-              alt="Yuya Wada"
-              width="256"
-              height="256"
-              loading="lazy"
-            >
-          </div>
-          <div>
-            <h3>代表メッセージ</h3>
-            <p>
-              全ての始まりは、スキルも経験も何もないまま友人と起業した4年前。<br>
-              Shopifyの未来を信じてひたすら技術を磨き、困っている方々の要望に応えて来ました。<br>
-              私たちの強みは、「安心して相談し合える関係」を築くことです。<br>
-              互いに誠実で信頼できる関係を目指し、一緒にブランドを盛り上げるパートナーとして並走していきたいです。
-            </p>
+      <!-- Work -->
+      <section class="work">
+        <div class="inner">
+          <h2>Work</h2>
+          <h3>事業内容</h3>
+          <p>
+            Shopifyでお困りのことがあれば何でもご相談ください。<br />
+            御社ブランドの悩みを話し合いながら解決します。
+          </p>
+          <div class="example">
+            <h4>機能開発実績の一部</h4>
+            <ul class="example-list">
+              <li>複数商品から2つ選ぶセット割引キャンペーン。</li>
+              <li>既存サイト用にカスタマイズしたお気に入り機能。</li>
+              <li>診断機能＋商品紹介。</li>
+              <li>Shopify Plus専用のチェックアウトアプリ開発。</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+
+      <!-- Comapny -->
+      <section class="company">
+        <div class="inner">
+          <h2>About</h2>
+          <h3>会社概要</h3>
+          <ul>
+            <li>
+              <p>会社名</p>
+              <p>株式会社Helpful</p>
+            </li>
+            <li>
+              <p>設立日</p>
+              <p>2024年11月11日</p>
+            </li>
+            <li>
+              <p>事業内容</p>
+              <p>ECサイトの構築・運用・アプリ開発</p>
+            </li>
+            <li>
+              <p>従業員</p>
+              <p>エンジニア2名・デザイナー1名 ※業務委託含む</p>
+            </li>
+            <li>
+              <p>代表取締役</p>
+              <p>和田祐耶</p>
+            </li>
+            <li>
+              <p>本社所在地</p>
+              <p>東京都目黒区青葉台4丁目4番12号 THE N3 306</p>
+            </li>
+            <li>
+              <p>連絡先</p>
+              <p>helpful3.inc@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- History -->
+      <section class="history">
+        <div class="inner">
+          <h2>History</h2>
+          <h3>沿革</h3>
+          <ul>
+            <li>
+              <p>2020年03月</p>
+              <p>九州大学卒業</p>
+            </li>
+            <li>
+              <p>2020年10月</p>
+              <p>株式会社UnReact創業（取締役）</p>
+            </li>
+            <li>
+              <p>2022年01月</p>
+              <p>同上退社</p>
+            </li>
+            <li>
+              <p>2022年03月</p>
+              <p>株式会社Band業務委託契約</p>
+            </li>
+            <li>
+              <p>2024年11月</p>
+              <p>株式会社Helpful創業</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Message -->
+      <section class="message">
+        <div class="inner">
+          <h2>Message</h2>
+          <div class="message-grid">
+            <div>
+              <img
+                class="ceo_image"
+                src="https://github.com/user-attachments/assets/3a58ce20-56cc-4ba1-84d6-bea76ca277ae"
+                alt="Yuya Wada"
+                width="256"
+                height="256"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h3>代表メッセージ</h3>
+              <p>
+                全ての始まりは、スキルも経験も何もないまま友人と起業した4年前。<br />
+                Shopifyの未来を信じてひたすら技術を磨き、困っている方々の要望に応えて来ました。<br />
+                私たちの強みは、「安心して相談し合える関係」を築くことです。<br />
+                互いに誠実で信頼できる関係を目指し、一緒にブランドを盛り上げるパートナーとして並走していきたいです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
