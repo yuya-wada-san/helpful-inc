@@ -9,3 +9,5 @@
 ![Entrepreneur](https://github.com/user-attachments/assets/9a17a204-3fd5-4584-a7bf-5b3a089466ab)
 
 ![Lunch Break 1](https://github.com/user-attachments/assets/e9ee79ad-6151-4ec8-8dc4-4b2154d6cf94)
+
+![Handshake](https://github.com/user-attachments/assets/bd7ee1b1-2126-4611-badb-934db4f95d4e)
